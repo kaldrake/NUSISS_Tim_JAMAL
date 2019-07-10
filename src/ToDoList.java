@@ -14,11 +14,11 @@ public class ToDoList
 		tasks.put(task.getDescription(), task);	
 	}
 	public void completeTask(String description) {
-		getTask(description).setComplete(true);
+		getTask(description).setStatus(true);
 		// Add code here
 	}
 	public boolean getStatus(String description) {		
-		return getTask(description).isComplete();
+		return getTask(description).isStatus();
 	}
 	public Task getTask(String description) {
 		// Add code here
@@ -36,7 +36,7 @@ public class ToDoList
 		
 		for (Task t : tasks.values())
 		{
-			if(t.isComplete())
+			if(t.isStatus())
 				completedTaskList.add(t);
 		}
 		
